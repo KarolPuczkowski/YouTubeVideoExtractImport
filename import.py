@@ -82,7 +82,7 @@ def insert_video_data(sku, video_url, thumbnail, video_title, video_description)
         cnx.close()
 
 # Load CSV file
-df = pd.read_csv('videos.csv')
+df = pd.read_csv('videos.csv', quotechar='"', lineterminator='\n')
 
 # Handle NaN values by replacing them with empty strings or appropriate default values
 df.fillna('', inplace=True)
